@@ -20,18 +20,18 @@ public class MyFilter3 implements Filter {
         // 토큰 : 코스
         if (req.getMethod().equals("POST")) {
             System.out.println("POST 요청 됨");
-            String authorization = req.getHeader("Authorization");
+            String authorization = req.getHeader(" ");
             System.out.println("authorization = " + authorization);
 
-            //토큰 : cos이걸만들어줘야 함. id,pwd정상적으로 들어와서 로그인
-            if (authorization.equals("cos")) {
-                filterChain.doFilter(request, response);
-
-            } else {
-                PrintWriter writer = res.getWriter();
-                writer.println("인증안됨");
-
-            }
+//            //토큰 : cos이걸만들어줘야 함. id,pwd정상적으로 들어와서 로그인
+//            if (authorization.equals("cos")) {
+//                filterChain.doFilter(request, response);
+//
+//            } else {
+//                PrintWriter writer = res.getWriter();
+//                writer.println("인증안됨");
+//
+//            }
         }
 
     }

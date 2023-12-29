@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JwtServerApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(JwtServerApplication.class, args);
     }
 

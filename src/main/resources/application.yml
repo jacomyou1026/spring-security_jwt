@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     url: jdbc:h2:tcp://localhost/~/JWT_meta
@@ -6,15 +5,16 @@ spring:
     password:
     driver-class-name: org.h2.Driver
 
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: create
-      properties:
-        hibernate:
-          #        show_sql: true
-          format_sql: true
-          default_batch_fetch_size: 100 #??? ??
-    h2:
-      console:
-        enabled: true
+        #        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100 #최적화 옵션
+#        in query의 개수를 몇개로 할 거냐
 
+logging.level:
+  org.hibernate.SQL: debug
+#  org.hibernate.type: trace
